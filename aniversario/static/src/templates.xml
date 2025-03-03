@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<templates xml:space="preserve">
+    <t t-name="EventRegistrationSummaryDialog" t-inherit-name="event.EventRegistrationSummaryDialog" t-inherit-mode="extension">
+        <xpath expr="//div[@t-if='registration.has_to_pay']" position="before">
+            <div t-if="!registration.invoice_paid" class="alert alert-danger text-center" role="alert">
+                No ha sido confirmado el pago
+            </div>
+        </xpath>
+    </t>
+</templates>
